@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>A Little Something for Hidayah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="cur" aria-hidden="true"></div>
+<button id="music" type="button" aria-pressed="false">♪ Music off</button>
+
+<main>
+  <section id="gate" class="scene on">
+    <form id="card" class="glass card-gate par" autocomplete="off">
+      <svg class="lock" viewBox="0 0 32 32" aria-hidden="true"><path class="sh" d="M10 14V10a6 6 0 0 1 12 0v4" fill="none" stroke="#c9b3ff" stroke-width="2.4" stroke-linecap="round"/><rect x="6" y="14" width="20" height="14" rx="4" fill="#c9b3ff"/><circle cx="16" cy="21" r="2" fill="#2a1250"/></svg>
+      <h1>A Little Surprise for You</h1>
+      <p>But first, there’s something you need to unlock.</p>
+      <label class="sr" for="pw">Password</label>
+      <div class="pw">
+        <input id="pw" type="password" placeholder="Enter your secret password..." required>
+        <button id="eye" type="button" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
+      </div>
+      <p id="msg" role="alert"></p>
+      <button id="go" class="btn" type="submit">Unlock Your Surprise ✨</button>
+      <small>Only someone special knows the password.</small>
+    </form>
+  </section>
+
+  <section id="intro" class="scene">
+    <p id="t1" class="big"></p>
+    <p id="t2" class="big"></p>
+    <button id="open" class="btn" type="button" hidden>Open Your Surprise</button>
+  </section>
+
+  <section id="env" class="scene">
+    <button id="envbtn" class="env" type="button" aria-label="Open the envelope"><span class="flap"></span><span class="sheet"></span><span class="front"></span></button>
+    <small id="hint">Tap the envelope</small>
+    <article id="letter" class="letter"><p id="lt"></p><button id="n1" class="btn" type="button" hidden>Continue</button></article>
+  </section>
+
+  <section id="cards" class="scene">
+    <h2 id="ct" class="big"></h2>
+    <div id="grid" class="grid"></div>
+    <button id="n2" class="btn" type="button">Continue</button>
+  </section>
+
+  <section id="final" class="scene">
+    <svg class="heart" viewBox="0 0 32 29" aria-hidden="true"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8fbe"/><stop offset="1" stop-color="#8a5cf6"/></linearGradient></defs><path fill="url(#hg)" d="M16 28C6 20 1 15 1 9a7 7 0 0 1 15-4 7 7 0 0 1 15 4c0 6-5 11-15 19z"/></svg>
+    <div class="tx">
+      <h2 id="fh" class="big rv" style="--d:1s"></h2>
+      <p id="fp" class="rv" style="--d:2.4s"></p>
+      <p id="fs" class="sign rv" style="--d:3.8s"></p>
+    </div>
+    <button id="again" class="btn" type="button" hidden>Read it again</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
